@@ -1,13 +1,12 @@
 import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import path from "node:path";
+import type { ThinkingLevel } from "@mariozechner/pi-agent-core";
 import {
 	type ExtensionAPI,
 	type ExtensionContext,
 	getAgentDir,
 } from "@mariozechner/pi-coding-agent";
-
-type ThinkingLevel = "off" | "minimal" | "low" | "medium" | "high" | "xhigh";
 
 interface PiSettings {
 	defaultProvider?: string;

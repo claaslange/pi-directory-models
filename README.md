@@ -39,21 +39,28 @@ Then every pi session started anywhere inside that project tree will switch to t
 ## Requirements
 
 - pi / `@mariozechner/pi-coding-agent` `>= 0.62.0`
+- extension peer deps: `@mariozechner/pi-coding-agent` and `@mariozechner/pi-agent-core` `>= 0.62.0`
 
 This extension does not use the APIs affected by the 0.62.0 breaking changes around `renderCall`/`renderResult` or `sourceInfo` provenance.
 
 ## Install
 
+### npm
+
+```bash
+pi install npm:@claaslange/pi-directory-models
+```
+
 ### Local path
 
 ```bash
-pi install /absolute/path/to/pi-model-scope
+pi install /absolute/path/to/pi-directory-models
 ```
 
 ### Git
 
 ```bash
-pi install git:github.com/<you>/pi-model-scope
+pi install git:github.com/claaslange/pi-directory-models
 ```
 
 ## Package layout
@@ -75,6 +82,19 @@ Useful scripts:
 - `npm run lint:fix`
 - `npm run format`
 - `npm run check`
+
+## Publishing (maintainers)
+
+This repo is set up to publish to npm via GitHub Actions on tags that match `vX.Y.Z`.
+
+To publish:
+
+1. Update `package.json` `version`.
+2. Push the commit.
+3. Push a matching tag, for example `git tag v0.1.0 && git push origin v0.1.0`.
+4. Configure npm Trusted Publishing for `claaslange/pi-directory-models` and the publish workflow.
+
+The published package name is `@claaslange/pi-directory-models`.
 
 ## Notes
 

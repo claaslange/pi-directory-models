@@ -1,10 +1,31 @@
 {
-	"name": "pi-directory-models",
+	"name": "@claaslange/pi-directory-models",
 	"version": "0.1.0",
 	"description": "pi extension that selects a model from the nearest ancestor .pi/settings.json",
-	"keywords": ["pi-package"],
+	"type": "module",
 	"license": "MIT",
+	"author": "claaslange",
+	"homepage": "https://github.com/claaslange/pi-directory-models",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/claaslange/pi-directory-models.git"
+	},
+	"bugs": {
+		"url": "https://github.com/claaslange/pi-directory-models/issues"
+	},
+	"keywords": [
+		"pi-package",
+		"pi",
+		"extension",
+		"models",
+		"directories",
+		"workspace",
+		"settings"
+	],
 	"files": ["extensions", "README.md", "LICENSE"],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"typecheck": "tsc --noEmit",
 		"lint": "biome check .",
@@ -13,10 +34,12 @@
 		"check": "npm run typecheck && npm run lint"
 	},
 	"peerDependencies": {
+		"@mariozechner/pi-agent-core": ">=0.62.0",
 		"@mariozechner/pi-coding-agent": ">=0.62.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@mariozechner/pi-agent-core": "^0.62.0",
 		"@mariozechner/pi-coding-agent": "^0.62.0",
 		"@types/node": "^24.5.2",
 		"typescript": "^5.9.2"
