@@ -38,10 +38,10 @@ Then every pi session started anywhere inside that project tree will switch to t
 
 ## Requirements
 
-- pi / `@mariozechner/pi-coding-agent` `>= 0.62.0`
-- extension peer deps: `@mariozechner/pi-coding-agent` and `@mariozechner/pi-agent-core` `>= 0.62.0`
+- pi with hosted packages under `@earendil-works/*`
+- extension peer deps: `@earendil-works/pi-coding-agent` and `@earendil-works/pi-agent-core`
 
-This extension does not use the APIs affected by the 0.62.0 breaking changes around `renderCall`/`renderResult` or `sourceInfo` provenance.
+This extension uses the current session lifecycle API (`session_start` with `event.reason`) and is meant for current hosted pi releases.
 
 ## Install
 

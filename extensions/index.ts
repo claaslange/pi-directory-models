@@ -1,12 +1,12 @@
 import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import path from "node:path";
-import type { ThinkingLevel } from "@mariozechner/pi-agent-core";
+import type { ThinkingLevel } from "@earendil-works/pi-agent-core";
 import {
 	type ExtensionAPI,
 	type ExtensionContext,
 	getAgentDir,
-} from "@mariozechner/pi-coding-agent";
+} from "@earendil-works/pi-coding-agent";
 
 interface PiSettings {
 	defaultProvider?: string;
@@ -214,11 +214,7 @@ async function applyScopedSettings(
 }
 
 export default function modelScopeExtension(pi: ExtensionAPI) {
-	pi.on("session_start", async (_event, ctx) => {
-		await applyScopedSettings(pi, ctx, { reason: "session start" });
-	});
-
-	pi.on("session_switch", async (_event, ctx) => {
-		await applyScopedSettings(pi, ctx, { reason: "session switch" });
+	pi.on("session_start", async (event, ctx) => {
+		await applyScopedSettings(pi, ctx, { reason: event.reason });
 	});
 }

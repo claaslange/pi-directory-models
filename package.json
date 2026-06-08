@@ -1,6 +1,6 @@
 {
 	"name": "@claaslange/pi-directory-models",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "pi extension that selects a model from the nearest ancestor .pi/settings.json",
 	"type": "module",
 	"license": "MIT",
@@ -34,13 +34,13 @@
 		"check": "npm run typecheck && npm run lint"
 	},
 	"peerDependencies": {
-		"@mariozechner/pi-agent-core": ">=0.62.0",
-		"@mariozechner/pi-coding-agent": ">=0.62.0"
+		"@earendil-works/pi-agent-core": "*",
+		"@earendil-works/pi-coding-agent": "*"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@mariozechner/pi-agent-core": "^0.62.0",
-		"@mariozechner/pi-coding-agent": "^0.62.0",
+		"@earendil-works/pi-agent-core": "^0.78.1",
+		"@earendil-works/pi-coding-agent": "^0.78.1",
 		"@types/node": "^24.5.2",
 		"typescript": "^5.9.2"
 	},
